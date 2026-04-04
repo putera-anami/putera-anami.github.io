@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Putera Anami's Portfolio Website — Full Stack Web Developer, IT Support."
+    />
+    <title>Putera Anami | Portfolio</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://putera-anami.github.io" />
+    <meta property="og:title" content="Putera Anami | Portfolio" />
+    <meta
+      property="og:description"
+      content="Putera Anami's Portfolio Website — Full Stack Web Developer, IT Support."
+    />
+    <meta property="og:image" content="assets/images/preview.png" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://putera-anami.github.io" />
+    <meta property="twitter:title" content="Putera Anami | Portfolio" />
+    <meta
+      property="twitter:description"
+      content="Putera Anami's Portfolio Website — Full Stack Web Developer, IT Support."
+    />
+    <meta property="twitter:image" content="assets/images/preview.png" />
+
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a href="#hero" class="nav-brand" onclick="closeMenu()"
+          >putera<span>@portfolio</span>:~$</a
+        >
+        <ul class="nav-links">
+          <li><a href="#about_me" data-i18n="about_me">about_me</a></li>
+          <li><a href="#experience" data-i18n="experience">experience</a></li>
+          <li><a href="#projects" data-i18n="projects">projects</a></li>
+          <li><a href="#blog">blog</a></li>
+          <li><a href="#contact" data-i18n="contact">contact</a></li>
+        </ul>
+        <div class="status-pill">
+          <div class="dot"></div>
+          <span data-i18n="nav_status">available</span>
+        </div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          onclick="toggleMenu()"
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mob-menu" id="mobMenu">
+      <div class="mob-menu-header">
+        <a href="#hero" class="mob-menu-brand" onclick="closeMenu()"
+          >putera<span>@portfolio</span>:~$</a
+        >
+        <button class="mob-menu-close" onclick="closeMenu()">✕</button>
+      </div>
+      <div class="mob-menu-body">
+        <a href="#about_me" class="mob-nav-item" onclick="closeMenu()">
+          <span class="mob-nav-num">01</span>
+          <span class="mob-nav-slash">/</span>
+          <span data-i18n="about_me">about_me</span>
+        </a>
+        <a href="#experience" class="mob-nav-item" onclick="closeMenu()">
+          <span class="mob-nav-num">02</span>
+          <span class="mob-nav-slash">/</span>
+          <span data-i18n="experience">experience</span>
+        </a>
+        <a href="#projects" class="mob-nav-item" onclick="closeMenu()">
+          <span class="mob-nav-num">03</span>
+          <span class="mob-nav-slash">/</span>
+          <span data-i18n="projects">projects</span>
+        </a>
+        <a href="#blog" class="mob-nav-item" onclick="closeMenu()">
+          <span class="mob-nav-num">04</span>
+          <span class="mob-nav-slash">/</span>
+          <span>blog</span>
+        </a>
+        <a href="#contact" class="mob-nav-item" onclick="closeMenu()">
+          <span class="mob-nav-num">05</span>
+          <span class="mob-nav-slash">/</span>
+          <span data-i18n="contact">contact</span>
+        </a>
+      </div>
+      <div class="mob-menu-footer">
+        <div class="dot"></div>
+        <span data-i18n="nav_status">available</span>
+      </div>
+    </div>
+
+    <main>
+      <section id="hero">
+        <div class="hero-layout">
+          <div class="hero-left">
+            <div class="hero-prompt fade-in">
+              <span class="sc-p">putera@portfolio:~$</span>
+              <span class="sc-c"> whoami</span>
+            </div>
+            <pre class="ascii-name fade-in">
+              ███╗   ███╗██╗   ██╗██╗  ██╗ █████╗ ███╗   ███╗███╗   ███╗ █████╗ ██████╗ 
+              ████╗ ████║██║   ██║██║  ██║██╔══██╗████╗ ████║████╗ ████║██╔══██╗██╔══██╗
+              ██╔████╔██║██║   ██║███████║███████║██╔████╔██║██╔████╔██║███████║██║  ██║
+              ██║╚██╔╝██║██║   ██║██╔══██║██╔══██║██║╚██╔╝██║██║╚██╔╝██║██╔══██║██║  ██║
+              ██║ ╚═╝ ██║╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║██║ ╚═╝ ██║██║  ██║██████╔╝
+              ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═════╝ 
+
+              ██████╗ ██╗   ██╗████████╗███████╗██████╗  █████╗ 
+              ██╔══██╗██║   ██║╚══██╔══╝██╔════╝██╔══██╗██╔══██╗
+              ██████╔╝██║   ██║   ██║   █████╗  ██████╔╝███████║
+              ██╔═══╝ ██║   ██║   ██║   ██╔══╝  ██╔══██╗██╔══██║
+              ██║     ╚██████╔╝   ██║   ███████╗██║  ██║██║  ██║
+              ╚═╝      ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
+
+               █████╗ ███╗   ██╗ █████╗ ███╗   ███╗██╗
+              ██╔══██╗████╗  ██║██╔══██╗████╗ ████║██║
+              ███████║██╔██╗ ██║███████║██╔████╔██║██║
+              ██╔══██║██║╚██╗██║██╔══██║██║╚██╔╝██║██║
+              ██║  ██║██║ ╚████║██║  ██║██║ ╚═╝ ██║██║
+              ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝
+            </pre>
+
+            <p class="hero-title fade-in">
+              <span class="tw-chevron">&#62;</span>
+              <span id="tw-text"></span><span class="cursor"></span>
+            </p>
+            <div class="hero-roles fade-in">
+              <span class="tag" data-i18n="tag_dev">full-stack-dev</span>
+              <span class="tag" data-i18n="tag_support">it-support</span>
+            </div>
+            <div class="hero-meta fade-in">
+              <span>
+                <span class="m-label" data-i18n="meta_loc">location: </span>
+                <span class="m-val">Banjarbaru, Indonesia</span>
+              </span>
+              <span>
+                <span class="m-label" data-i18n="meta_stat">status: </span>
+                <span class="m-val" data-i18n="status">open to work</span>
+              </span>
+            </div>
+            <div class="hero-actions fade-in">
+              <a href="#contact" class="btn btn-primary" data-i18n="btn_contact"
+                >$ get_in_touch</a
+              >
+              <a href="#projects" class="btn btn-outline" data-i18n="btn_proj"
+                >$ view_projects</a
+              >
+            </div>
+          </div>
+
+          <div class="photo-wrap fade-in">
+            <div class="photo-frame">
+              <div class="photo-avatar">
+                <img src="assets/images/photo.jpg" alt="Putera Anami" />
+              </div>
+              <div class="photo-scan"></div>
+              <div class="photo-glitch"></div>
+              <div class="photo-corner pc-tl"></div>
+              <div class="photo-corner pc-tr"></div>
+              <div class="photo-corner pc-bl"></div>
+              <div class="photo-corner pc-br"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about_me">
+        <div class="sec-hdr">
+          <div class="sec-cmd">
+            <span class="sc-p">putera@portfolio:~$</span>
+            <span class="sc-c"> cat</span><span> about_me.json</span>
+          </div>
+          <h2 class="sec-title">
+            <span class="acc">&gt; </span
+            ><span data-i18n="about_me">about_me</span
+            ><span class="cursor"></span>
+          </h2>
+          <div class="sec-div"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <div class="tb-macos-dots">
+                <div class="tb-dot-mac"></div>
+                <div class="tb-dot-mac"></div>
+                <div class="tb-dot-mac"></div>
+              </div>
+              <span class="tb-title">about_me.json</span>
+            </div>
+
+            <div class="terminal-body">
+              <div class="json-wrap">
+                <span class="jb">{</span>
+                <div class="jl">
+                  <span class="jk"
+                    >"<span data-i18n="jk_name">name</span>"</span
+                  >
+                  <span class="jc">: </span>
+                  <span class="js">"Muhammad Putera Anami"</span>
+                  <span class="jc">,</span>
+                </div>
+                <div class="jl">
+                  <span class="jk"
+                    >"<span data-i18n="jk_location">location</span>"</span
+                  >
+                  <span class="jc">: </span>
+                  <span class="js"
+                    >"Banjarbaru,
+                    <span data-i18n="jv_region">South Kalimantan</span>,
+                    ID"</span
+                  >
+                  <span class="jc">,</span>
+                </div>
+                <div class="jl">
+                  <span class="jk">"instagram"</span>
+                  <span class="jc">: </span>
+                  <span class="js">"@putera_anami"</span>
+                  <span class="jc">,</span>
+                </div>
+                <div class="jl">
+                  <span class="jk">"github"</span>
+                  <span class="jc">: </span>
+                  <span class="js">"putera-anami"</span>
+                  <span class="jc">,</span>
+                </div>
+                <div class="jl">
+                  <span class="jk">"linkedin"</span>
+                  <span class="jc">: </span>
+                  <span class="js">"Muhammad Putera Anami"</span>
+                  <span class="jc">,</span>
+                </div>
+                <div class="jl">
+                  <span class="jk"
+                    >"<span data-i18n="jk_skills">skills</span>"</span
+                  >
+                  <span class="jc">: </span>
+                  <span class="js">[</span>
+                  <div class="jl">
+                    <span class="js"
+                      >"<span data-i18n="jv_skill1"
+                        >full stack web development</span
+                      >"</span
+                    >
+                    <span class="jc">,</span>
+                    <br />
+                    <span class="js"
+                      >"<span data-i18n="jv_skill2">it support</span>"</span
+                    >
+                  </div>
+                  <span class="js">]</span>
+                  <span class="jc">,</span>
+                </div>
+                <div class="jl">
+                  <span class="jk"
+                    >"<span data-i18n="jk_open_to_work">open_to_work</span
+                    >"</span
+                  >
+                  <span class="jc">: </span>
+                  <span class="js">true</span>
+                </div>
+                <span class="jb">}</span>
+              </div>
+
+              <p class="about-bio" data-i18n="about_bio">
+                A fresh graduate with a Bachelor's degree in Informatics from
+                Universitas Muhammadiyah Malang with a strong passion for
+                technology. A detail-oriented person who enjoys learning new
+                things for personal growth and development. Experienced in
+                various student organizations, which has helped build strong
+                teamwork and collaboration skills in diverse working
+                environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="sec-hdr">
+          <div class="sec-cmd">
+            <span class="sc-p">putera@portfolio:~$</span>
+            <span class="sc-c"> git log</span>
+          </div>
+          <h2 class="sec-title">
+            <span class="acc">&gt; </span
+            ><span data-i18n="experience">experience</span
+            ><span class="cursor"></span>
+          </h2>
+          <div class="sec-div"></div>
+        </div>
+
+        <div class="exp-list">
+          <a
+            href="https://syifaglobalgroup.com/"
+            target="_blank"
+            class="exp-item"
+          >
+            <div class="exp-header">
+              <div>
+                <div class="exp-role" data-i18n="exp_role1">
+                  IT Support & Programmer (Internship)
+                </div>
+                <div class="exp-company">
+                  PT. Syifa Global Group | Banjarbaru, ID
+                </div>
+              </div>
+              <span class="exp-period"
+                ><span data-i18n="exp_date1">2 Feb 2026 — Present</span></span
+              >
+            </div>
+            <p class="exp-desc" data-i18n="exp1_desc">
+              Responsible for installing, configuring, and troubleshooting of
+              hardware and software for users. Assist in developing plugins for
+              the SIMRS application, and managed content updates for the
+              hospital website.
+            </p>
+            <div class="exp-tags">
+              <span class="exp-tag">Laravel</span>
+              <span class="exp-tag">Bootstrap</span>
+              <span class="exp-tag">MySQL</span>
+              <span class="exp-tag">GIT</span>
+              <span class="exp-tag">Wordpress</span>
+              <span class="exp-tag">Elementor</span>
+              <span class="exp-tag">Support</span>
+            </div>
+          </a>
+          <!-- exp-item 2 -->
+          <!-- exp-item 3 -->
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="sec-hdr">
+          <div class="sec-cmd">
+            <span class="sc-p">putera@portfolio:~$</span>
+            <span class="sc-c"> ls -la</span><span> ~/projects</span>
+          </div>
+          <h2 class="sec-title">
+            <span class="acc">&gt; </span
+            ><span data-i18n="projects">projects</span
+            ><span class="cursor"></span>
+          </h2>
+          <div class="sec-div"></div>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="proj-shot">
+              <div class="proj-shot-browser">
+                <div class="proj-browser-dot"></div>
+                <div class="proj-browser-dot"></div>
+                <div class="proj-browser-dot"></div>
+                <div class="proj-browser-url"></div>
+              </div>
+              <img src="assets/images/project1.webp" />
+              <div class="proj-shot-overlay"></div>
+            </div>
+            <div class="proj-body">
+              <div class="project-num">01 / algorithm</div>
+              <div class="project-name" data-i18n="proj1_name">
+                LeetCode Solution in Bahasa Indonesia
+              </div>
+              <p class="project-desc" data-i18n="proj1_desc">
+                Daily practice on the LeetCode platform to improve programming
+                skills. Each line of code is accompanied by comments so that the
+                problem-solving process can be easily understood.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/putera-anami/Solusi-LeetCode-Bahasa-Indonesia"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <img src="assets/icons/icon-code.svg" alt="code" />code
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- project-card 2 -->
+          <!-- project-card 3 -->
+          <!-- project-card 4 -->
+          <!-- project-card 5 -->
+          <!-- project-card 6 -->
+        </div>
+      </section>
+
+      <section id="blog">
+        <div class="sec-hdr">
+          <div class="sec-cmd">
+            <span class="sc-p">putera@portfolio:~$</span>
+            <span class="sc-c"> tail -n 5</span><span> blog/posts.log</span>
+          </div>
+          <h2 class="sec-title">
+            <span class="acc">&gt; </span>blog<span class="cursor"></span>
+          </h2>
+          <div class="sec-div"></div>
+        </div>
+
+        <div class="blog-list">
+          <a href="https://linkedin.com" target="_blank" class="blog-item">
+            <span class="blog-cat">dev</span>
+            <span class="blog-title" data-i18n="blog1">
+              The Story Behind This Website
+            </span>
+            <span class="blog-date" data-i18n="blog_date1">4 Apr 2026</span>
+          </a>
+          <!-- blog item 2 -->
+          <!-- blog item 3 -->
+          <!-- blog item 4 -->
+          <!-- blog item 5 -->
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="sec-hdr">
+          <div class="sec-cmd">
+            <span class="sc-p">putera@portfolio:~$</span>
+            <span class="sc-c"> nc -v</span
+            ><span> putera-anami.github.io 443</span>
+          </div>
+          <h2 class="sec-title">
+            <span class="acc">&gt; </span
+            ><span data-i18n="contact">contact</span
+            ><span class="cursor"></span>
+          </h2>
+          <div class="sec-div"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <p class="contact-intro" data-i18n="contact_intro">
+              Interested in collaborating or have an exciting project? Feel free
+              to reach out. I am open to freelance, full-time, part-time, or
+              technical discussions.
+            </p>
+            <div class="contact-links">
+              <a
+                href="https://instagram.com/putera_anami/"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="cl-icon">
+                  <img src="assets/icons/icon-instagram.svg" alt="instagram" />
+                </div>
+                @putera_anami
+              </a>
+              <a
+                href="https://github.com/putera-anami/"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="cl-icon">
+                  <img src="assets/icons/icon-github.svg" alt="github" />
+                </div>
+                github.com/putera-anami
+              </a>
+              <a
+                href="https://linkedin.com/in/muhammad-putera-anami/"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="cl-icon">
+                  <img src="assets/icons/icon-linkedin.svg" alt="linkedin" />
+                </div>
+                linkedin.com/in/muhammad-putera-anami
+              </a>
+              <a
+                href="https://www.google.com/maps/place/Banjarbaru,+Banjarbaru+City,+South+Kalimantan/"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="cl-icon">
+                  <img src="assets/icons/icon-location.svg" alt="location" />
+                </div>
+                <span data-i18n="contact_loc"
+                  >Banjarbaru, South Kalimantan, ID</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <div class="tb-macos-dots">
+                <div class="tb-dot-mac"></div>
+                <div class="tb-dot-mac"></div>
+                <div class="tb-dot-mac"></div>
+              </div>
+              <span class="tb-title">send_message.sh</span>
+            </div>
+            <div class="terminal-body">
+              <form
+                class="contact-form"
+                id="contact-form"
+                action="https://formspree.io/f/mdapnpdq"
+                method="POST"
+              >
+                <div class="form-group">
+                  <label class="form-label">
+                    <em>$</em>
+                    <span data-i18n="form_name">your_name</span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    id="inp-name"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">
+                    <em>$</em>
+                    <span data-i18n="form_email">email_address</span>
+                  </label>
+                  <input
+                    type="email"
+                    class="form-input"
+                    id="inp-email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">
+                    <em>$</em>
+                    <span data-i18n="form_msg">message</span>
+                  </label>
+                  <textarea
+                    class="form-textarea"
+                    id="inp-msg"
+                    name="message"
+                    required
+                  ></textarea>
+                </div>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="form-btn"
+                  data-i18n="form_send"
+                >
+                  $ send_message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <span class="f-acc">putera@portfolio:~$ </span>©
+        <span id="year"></span> Muhammad Putera Anami.
+        <span data-i18n="footer_copyright">All rights reserved.</span>
+      </p>
+    </footer>
+
+    <div class="fab-wrap" id="fabWrap">
+      <div class="fab-actions" id="fabActions">
+        <button
+          class="fab-action"
+          id="themeBtn"
+          onclick="toggleTheme()"
+          title="Toggle theme"
+        >
+          <img id="iconSun" src="assets/icons/icon-sun.svg" alt="light mode" />
+          <img id="iconMoon" src="assets/icons/icon-moon.svg" alt="dark mode" />
+        </button>
+        <button
+          class="fab-action"
+          id="langBtn"
+          onclick="toggleLang()"
+          title="Toggle language"
+        >
+          <img id="flagID" src="assets/icons/icon-flag-id.svg" alt="ID" />
+          <img id="flagUK" src="assets/icons/icon-flag-uk.svg" alt="UK" />
+        </button>
+      </div>
+
+      <button
+        class="fab-main"
+        id="fabMain"
+        onclick="toggleFab()"
+        title="Settings"
+      >
+        <img src="assets/icons/icon-settings.svg" alt="settings" />
+      </button>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>
