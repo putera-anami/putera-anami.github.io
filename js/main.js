@@ -96,7 +96,7 @@ const T = {
     proj1_name: "Solusi LeetCode Bahasa Indonesia",
     proj1_desc:
       "Latihan harian di platform LeetCode untuk meningkatkan kemampuan pemrograman. Setiap baris kode diberi komentar agar penyelesaian masalah dapat mudah dipahami.",
-    blog1: "Cerita di Balik Webiste Ini",
+    blog1: "Cerita di Balik Website Ini",
     blog_date1: "4 Apr 2026",
     contact_intro:
       "Tertarik berkolaborasi atau punya project menarik? Jangan ragu untuk menghubungi saya. Saya terbuka untuk freelance, penuh waktu, paruh waktu, maupun diskusi teknis.",
@@ -106,7 +106,7 @@ const T = {
     form_email: "alamat_email",
     form_email_ph: "masukkan email kamu...",
     form_msg: "pesan",
-    form_msg_ph: "ceritakan tentang proyek kammu...",
+    form_msg_ph: "ceritakan tentang proyek kamu...",
     form_send: "$ kirim_pesan",
     form_sending: "$ mengirim...",
     form_success: "Pesan terkirim! Saya akan membalas secepatnya.",
